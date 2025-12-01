@@ -1,6 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -69,6 +71,31 @@ public class Main {
             }
         } else {
             System.out.println("\tEgy dobás sem került be ebben az évben.");
+        }
+
+        ArrayList<String> orszagkodok = new ArrayList<>();
+
+        for (Sportolo sportolo : sporolok) {
+            if (!orszagkodok.contains(sportolo.getOrszagkod())) orszagkodok.add(sportolo.getOrszagkod());
+        }
+
+        Map<String, Integer> statisztika = new HashMap<>();
+        for (String orszagkod : orszagkodok) {
+
+            int darab = 0;
+
+            for (Sportolo sportolo : sporolok) {
+                if (sportolo.getOrszagkod().equalsIgnoreCase(orszagkod)) {
+                    darab++;
+                }
+            }
+
+            statisztika.put(orszagkod, darab);
+        }
+
+        System.out.println("7. feladat: Statisztika");
+        for (String key : statisztika.keySet()) {
+            System.out.println("\t" + key + " - " + statisztika.get(key) + " dobás");
         }
     }
 }
