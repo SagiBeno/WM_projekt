@@ -1,6 +1,6 @@
 public class Sportolo {
     int helyezes;
-    int eredmeny;
+    double eredmeny;
     String sportolo;
     String orszagkod;
     String helyszin;
@@ -10,7 +10,7 @@ public class Sportolo {
         return helyezes;
     }
 
-    public int getEredmeny() {
+    public double getEredmeny() {
         return eredmeny;
     }
 
@@ -34,7 +34,7 @@ public class Sportolo {
         this.helyezes = helyezes;
     }
 
-    public void setEredmeny(int eredmeny) {
+    public void setEredmeny(double eredmeny) {
         this.eredmeny = eredmeny;
     }
 
@@ -54,7 +54,7 @@ public class Sportolo {
         this.datum = datum;
     }
 
-    public Sportolo (int helyezes, int eredmeny, String sportolo, String orszagkod, String helyszin, String datum) {
+    public Sportolo (int helyezes, double eredmeny, String sportolo, String orszagkod, String helyszin, String datum) {
         this.setHelyezes(helyezes);
         this.setEredmeny(eredmeny);
         this.setSportolo(sportolo);
