@@ -61,7 +61,6 @@ public class Sportolo {
         this.setOrszagkod(orszagkod);
         this.setHelyszin(helyszin);
         this.setDatum(datum);
-
     }
 }
 
