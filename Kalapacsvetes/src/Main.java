@@ -45,5 +45,30 @@ public class Main {
         double magyarAtlagEredmeny = magyarEredmenyOsszeg / magyarEredmenyDarab;
 
         System.out.println("5. feladat: A magyar sportolók átlagosan " + String.format("%.2f", magyarAtlagEredmeny) + " métert dobtak.");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("6. feladat: Adjon meg egy évszámot:");
+        int evszam = scanner.nextInt();
+
+        int evszamDarab = 0;
+        ArrayList<String> nevek = new ArrayList<>();
+
+        for (Sportolo sportolo : sporolok) {
+
+            if (sportolo.getDatum().contains(String.valueOf(evszam))) {
+                evszamDarab++;
+                nevek.add(sportolo.getSportolo());
+            }
+        }
+
+        if (evszamDarab > 0) {
+            System.out.println("\t" + evszamDarab + " darab dobás került be ebben az évben.");
+            for (String nev : nevek) {
+                System.out.println("\t" + nev);
+
+            }
+        } else {
+            System.out.println("\tEgy dobás sem került be ebben az évben.");
+        }
     }
 }
