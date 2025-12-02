@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
@@ -20,6 +21,9 @@ public class FuggohodakController {
     @FXML public TextField orszag_Textfield;
     @FXML public TextField hossz_Textfield;
     @FXML public TextField ev_Textfield;
+    @FXML public RadioButton elotti_RadioButton;
+    @FXML public RadioButton utani_RadioButton;
+    @FXML public TextField hidakSzama_TextField;
 
     public ArrayList<Fuggohid> filereader(String filename) throws FileNotFoundException {
         ArrayList<Fuggohid> hidak = new ArrayList<>();
@@ -87,4 +91,31 @@ public class FuggohodakController {
             }
         }
     }
+
+    @FXML
+    public void handleRadioButtons () {
+        int darab = 0;
+
+        if (elotti_RadioButton.isSelected()) {
+            for (Fuggohid fuggohid : fuggohidak) {
+                if (fuggohid.getEv() < 2000) {
+                    darab++;
+                }
+            }
+
+            hidakSzama_TextField.setText(String.valueOf(darab));
+        }
+
+        if (utani_RadioButton.isSelected()) {
+            for (Fuggohid fuggohid : fuggohidak) {
+                if (fuggohid.getEv() >= 2000) {
+                    darab++;
+                }
+            }
+
+            hidakSzama_TextField.setText(String.valueOf(darab));
+        }
+    }
+
+
 }

@@ -29,19 +29,22 @@
                         <Label prefHeight="17.0" prefWidth="128.0" text="Hidak száma" />
                         <VBox fx:id="hidakSzama_VBox" alignment="CENTER_LEFT" disable="true" prefHeight="118.0" prefWidth="225.0" style="-fx-border-color: rgb(210, 210, 210); -fx-border-style: solid; -fx-border-image-width: 1px;">
                            <children>
-                              <RadioButton mnemonicParsing="false" text="2000 előtt épült">
+                              <RadioButton mnemonicParsing="false" onAction="#handleRadioButtons" text="2000 előtt épült" fx:id="elotti_RadioButton">
                                  <VBox.margin>
                                     <Insets bottom="10.0" />
                                  </VBox.margin>
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="hidakSzama" />
+                                 </toggleGroup>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" text="2000-ben vagy utána">
+                              <RadioButton mnemonicParsing="false" onAction="#handleRadioButtons" text="2000-ben vagy utána" toggleGroup="$hidakSzama" fx:id="utani_RadioButton">
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>
                               </RadioButton>
                               <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="225.0">
                                  <children>
-                                    <TextField prefHeight="25.0" prefWidth="139.0" />
+                                    <TextField editable="false" prefHeight="25.0" prefWidth="139.0" fx:id="hidakSzama_TextField" />
                                     <Label text="darab">
                                        <HBox.margin>
                                           <Insets left="5.0" />
