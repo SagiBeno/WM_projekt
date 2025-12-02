@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5abdb483-119a-41fd-aafe-66beb07ee974" name="Changes" comment="Solve task 7." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "SagiBeno"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SagiBeno/WM_projekt.git",
+    "accountId": "06276ef7-820a-422a-a47b-162d208dfe01"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="36EUauqeYVKozGdq89jzgtZnA8u" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/kalapacsvetes",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/User/Documents/SagiBeno_13A/20251201_WM_projekt_feladatsor/Kalapacsvetes/src/Main.java",
+    "settings.editor.selected.configurable": "preferences.updates"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Kalapacsvetes" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5abdb483-119a-41fd-aafe-66beb07ee974" name="Changes" comment="" />
+      <created>1764571292683</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1764571292683</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Create project">
+      <option name="closed" value="true" />
+      <created>1764571942667</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1764571942667</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Implement Sportolo class">
+      <option name="closed" value="true" />
+      <created>1764573197633</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1764573197633</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Solve task 3.">
+      <option name="closed" value="true" />
+      <created>1764574167861</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1764574167861</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Solve task 5.">
+      <option name="closed" value="true" />
+      <created>1764574996112</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1764574996112</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Solve task 6.">
+      <option name="closed" value="true" />
+      <created>1764575579527</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1764575579527</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Solve task 7.">
+      <option name="closed" value="true" />
+      <created>1764576392331</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1764576392331</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Create project" />
+    <MESSAGE value="Solve task 2." />
+    <MESSAGE value="Solve task 2." />
+    <MESSAGE value="Solve task 3." />
+    <MESSAGE value="Solve task 5." />
+    <MESSAGE value="Solve task 6." />
+    <MESSAGE value="Solve task 7." />
+    <option name="LAST_COMMIT_MESSAGE" value="Solve task 7." />
+  </component>
+</project>
