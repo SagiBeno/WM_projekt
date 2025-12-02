@@ -49,6 +49,8 @@ public class FuggohodakController {
                 hidak.add(new Fuggohid(helyezes, hid, hely, orszag, hossz, ev));
             }
 
+            scanner.close();
+
             return hidak;
 
         } catch (Exception e) {
@@ -117,5 +119,8 @@ public class FuggohodakController {
         }
     }
 
+    @FXML
+    public void handleExit () {
 
+    }
 }
