@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
 import java.io.File;
@@ -15,6 +16,10 @@ public class FuggohodakController {
     public ArrayList<Fuggohid> fuggohidak = new ArrayList<>();
     @FXML public VBox hidakSzama_VBox;
     @FXML public ListView<String> listview;
+    @FXML public TextField hely_Textfield;
+    @FXML public TextField orszag_Textfield;
+    @FXML public TextField hossz_Textfield;
+    @FXML public TextField ev_Textfield;
 
     public ArrayList<Fuggohid> filereader(String filename) throws FileNotFoundException {
         ArrayList<Fuggohid> hidak = new ArrayList<>();
@@ -63,11 +68,23 @@ public class FuggohodakController {
                 }
 
                 listview.setItems(listviewData);
-
-
             }
         } catch (FileNotFoundException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    @FXML
+    public void handleTextFields () {
+        String hid = listview.getSelectionModel().getSelectedItem();
+
+        for (Fuggohid fuggohid : fuggohidak) {
+            if (fuggohid.getHid().equalsIgnoreCase(hid)) {
+                hely_Textfield.setText(fuggohid.getHely());
+                orszag_Textfield.setText(fuggohid.getOrszag());
+                hossz_Textfield.setText(String.valueOf(fuggohid.getHossz()));
+                ev_Textfield.setText(String.valueOf(fuggohid.getEv()));
+            }
         }
     }
 }
