@@ -88,7 +88,6 @@ app.get('/api/nevnapok', (req, res) => {
     if (nap) {
         const datumParts = nap.split('-');
         
-        
         if (datumParts.length !== 2 || !datumParts[0] || !datumParts[1] || datumParts[0] < 1 || datumParts[0] > 12 || datumParts[1] < 1 || datumParts[1] > 31) return res.status(400).json({minta1: "/?nap=12-31", minta2:"/?nev=Szilveszter"});
         else {
             const datum = datumParts.map(Number);
@@ -112,8 +111,6 @@ app.get('/api/nevnapok', (req, res) => {
                             });
                             return res.status(200).json(responseData);
                         } else return res.status(404).json({hiba: 'nincs találat'});
-                        
-                        
                     }
                     else return res.status(404).json({hiba: 'nincs találat'});
                 }
