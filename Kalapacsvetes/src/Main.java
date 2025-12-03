@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,6 +31,13 @@ public class Main {
         }
 
         return sportolok;
+    }
+
+    public static void filewriter(String filename, StringBuilder output) throws IOException {
+        File file = new File(filename);
+        FileWriter writer = new FileWriter(file);
+        writer.write(String.valueOf(output));
+        writer.close();
     }
 
     public static void main(String[] args) throws FileNotFoundException {
@@ -97,5 +106,20 @@ public class Main {
         for (String key : statisztika.keySet()) {
             System.out.println("\t" + key + " - " + statisztika.get(key) + " dobás");
         }
+
+        StringBuilder output = new StringBuilder();
+        output.append("Helyezés;Eredmény;Sportoló;Országkód;Helyszín;Dátum");
+        for (Sportolo sportolo : sporolok) {
+            if (sportolo.getOrszagkod().equalsIgnoreCase("hun")) {
+                output.append("\n" + sportolo.getHelyezes() + ";" + sportolo.getEredmeny() + ";" + sportolo.getSportolo() + ";" + sportolo.getOrszagkod() + ";" + sportolo.getHelyszin() + ";" + sportolo.getDatum());
+            }
+        }
+
+        try {
+            filewriter("magyarok.txt", output);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }
