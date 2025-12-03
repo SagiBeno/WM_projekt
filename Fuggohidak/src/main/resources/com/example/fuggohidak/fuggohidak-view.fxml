@@ -11,9 +11,8 @@
    <children>
       <HBox prefHeight="0.0" prefWidth="460.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#handleOpen" style="-fx-border-width: 0px; -fx-background-color: none;" text="Megnyitás" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-border-width: 0px; -fx-background-color: none;" text="Keresés" />
-            <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" style="-fx-border-width: 0px; -fx-background-color: none;" text="Kilépés" />
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleSearch" style="-fx-border-width: 0px; -fx-background-color: none;" text="Keresés" />
+            <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleExit" style="-fx-border-width: 0px; -fx-background-color: none;" text="Kilépés" />
          </children>
       </HBox>
       <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="450.0" minWidth="450.0">
@@ -29,7 +28,7 @@
                         <Label prefHeight="17.0" prefWidth="128.0" text="Hidak száma" />
                         <VBox fx:id="hidakSzama_VBox" alignment="CENTER_LEFT" disable="true" prefHeight="118.0" prefWidth="225.0" style="-fx-border-color: rgb(210, 210, 210); -fx-border-style: solid; -fx-border-image-width: 1px;">
                            <children>
-                              <RadioButton mnemonicParsing="false" onAction="#handleRadioButtons" text="2000 előtt épült" fx:id="elotti_RadioButton">
+                              <RadioButton fx:id="elotti_RadioButton" mnemonicParsing="false" onAction="#handleRadioButtons" text="2000 előtt épült">
                                  <VBox.margin>
                                     <Insets bottom="10.0" />
                                  </VBox.margin>
@@ -37,14 +36,14 @@
                                     <ToggleGroup fx:id="hidakSzama" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton mnemonicParsing="false" onAction="#handleRadioButtons" text="2000-ben vagy utána" toggleGroup="$hidakSzama" fx:id="utani_RadioButton">
+                              <RadioButton fx:id="utani_RadioButton" mnemonicParsing="false" onAction="#handleRadioButtons" text="2000-ben vagy utána" toggleGroup="$hidakSzama">
                                  <VBox.margin>
                                     <Insets />
                                  </VBox.margin>
                               </RadioButton>
                               <HBox alignment="CENTER_LEFT" prefHeight="43.0" prefWidth="225.0">
                                  <children>
-                                    <TextField editable="false" prefHeight="25.0" prefWidth="139.0" fx:id="hidakSzama_TextField" />
+                                    <TextField fx:id="hidakSzama_TextField" editable="false" prefHeight="25.0" prefWidth="139.0" />
                                     <Label text="darab">
                                        <HBox.margin>
                                           <Insets left="5.0" />
@@ -89,7 +88,7 @@
                   </GridPane>
                   <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="253.0" prefWidth="225.0">
                      <children>
-                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Kilépés" />
+                        <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleExit" text="Kilépés" />
                      </children>
                   </VBox>
                </children></VBox>

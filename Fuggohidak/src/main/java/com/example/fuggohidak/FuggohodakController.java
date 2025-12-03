@@ -1,20 +1,29 @@
 package com.example.fuggohidak;
 
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 import java.util.Scanner;
 
-public class FuggohodakController {
-    public ArrayList<Fuggohid> fuggohidak = new ArrayList<>();
+public class FuggohodakController implements Initializable {
+    public static ArrayList<Fuggohid> fuggohidak = new ArrayList<>();
     @FXML public VBox hidakSzama_VBox;
     @FXML public ListView<String> listview;
     @FXML public TextField hely_Textfield;
@@ -24,6 +33,8 @@ public class FuggohodakController {
     @FXML public RadioButton elotti_RadioButton;
     @FXML public RadioButton utani_RadioButton;
     @FXML public TextField hidakSzama_TextField;
+
+    public static Stage search = new Stage();
 
     public ArrayList<Fuggohid> filereader(String filename) throws FileNotFoundException {
         ArrayList<Fuggohid> hidak = new ArrayList<>();
@@ -57,27 +68,6 @@ public class FuggohodakController {
             e.printStackTrace();
         }
         return hidak;
-    }
-
-    @FXML
-    public void handleOpen() {
-        try {
-            fuggohidak = filereader("fuggohidak.csv");
-
-            if (!fuggohidak.isEmpty()) {
-                hidakSzama_VBox.setDisable(false);
-
-                ObservableList<String> listviewData = FXCollections.observableArrayList();
-
-                for (Fuggohid fuggohid : fuggohidak) {
-                    listviewData.add(fuggohid.getHid());
-                }
-
-                listview.setItems(listviewData);
-            }
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @FXML
@@ -121,6 +111,37 @@ public class FuggohodakController {
 
     @FXML
     public void handleExit () {
+        Platform.exit();
+    }
 
+    @FXML
+    public void handleSearch () throws IOException {
+        search.initModality(Modality.APPLICATION_MODAL);
+        FXMLLoader fxmlLoader = new FXMLLoader(FuggohidakApplication.class.getResource("kereses-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 610, 610);
+        search.setTitle("Keresés");
+        search.setScene(scene);
+        search.show();
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        try {
+            fuggohidak = filereader("fuggohidak.csv");
+
+            if (!fuggohidak.isEmpty()) {
+                hidakSzama_VBox.setDisable(false);
+
+                ObservableList<String> listviewData = FXCollections.observableArrayList();
+
+                for (Fuggohid fuggohid : fuggohidak) {
+                    listviewData.add(fuggohid.getHid());
+                }
+
+                listview.setItems(listviewData);
+            }
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
